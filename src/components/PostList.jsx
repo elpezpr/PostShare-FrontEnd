@@ -29,11 +29,10 @@ const PostList = () => {
       });
   
       if (!response.ok) {
-        const errorText = await response.text(); // Capture error text from response
+        const errorText = await response.text();
         throw new Error(`Failed to delete post: ${errorText}`);
       }
   
-      // Remove the deleted post from the UI
       setPosts((prevPosts) => prevPosts.filter(post => post.id !== postId));
       alert('Post deleted successfully!');
     } catch (error) {

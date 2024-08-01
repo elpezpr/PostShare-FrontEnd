@@ -1,6 +1,5 @@
-// src/pages/HomePage.jsx
 import React, { useEffect, useState } from 'react';
-import PostList from '../components/PostList'; // Import your PostList component
+import PostList from '../components/PostList';
 // import '../styles/HomePage.css';
 
 const HomePage = () => {
@@ -8,7 +7,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch('http://localhost:8080/api/posts'); // Adjust API endpoint as needed
+      const response = await fetch('http://localhost:8080/api/posts');
       const data = await response.json();
       setPosts(data);
     };

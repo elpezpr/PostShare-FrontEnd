@@ -11,8 +11,8 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/posts/:postId" element={<PostDetail />} /> {/* Corrected component name */}
-        <Route path="/add-post" element={<AddPostForm />} /> {/* Corrected component name */}
+        <Route path="/posts/:postId" element={<PostDetail />} />
+        <Route path="/add-post" element={<AddPostForm />} />
       </Routes>
     </Router>
   );

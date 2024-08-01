@@ -16,12 +16,12 @@ const PostDetail = () => {
         if (!postResponse.ok) throw new Error('Failed to fetch post');
         const postData = await postResponse.json();
         setPost(postData);
-
+  
         const commentsResponse = await fetch(`http://localhost:8080/api/posts/${postId}/comments`);
         if (!commentsResponse.ok) {
           // Handle error or set comments to empty array
-          const commentsData = await commentsResponse.json();
-          setComments(commentsData);
+          console.error('Failed to fetch comments');
+          setComments([]); // Or handle error differently
         } else {
           const commentsData = await commentsResponse.json();
           setComments(commentsData);
@@ -31,9 +31,9 @@ const PostDetail = () => {
         console.error('Error fetching data:', error);
       }
     };
-
+  
     fetchPostDetails();
-  }, [postId]);
+  }, [postId]);;
 
   const refreshComments = async () => {
     try {
