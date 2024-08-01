@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import PostDetail from './components/PostDetail'; // Corrected import
 import AddPostForm from './components/AddPostForm'; // Corrected import
+import UpdatePostForm from './components/UpdatePostForm';
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/posts/:postId" element={<PostDetail />} />
         <Route path="/add-post" element={<AddPostForm />} />
-        <Route path="/edit-post/:postId" element={<AddPostForm />} />
+        <Route path="/update-post/:postId" element={<UpdatePostForm />} />
       </Routes>
     </Router>
   );

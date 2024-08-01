@@ -11,6 +11,9 @@ const Navbar = () => {
       <Link to="/add-post" className="navbar-link">
         Add Post
       </Link>
+      <Link to="/update-post/:postId" className="navbar-link">
+        Update Post
+      </Link>
     </nav>
   );
 };
