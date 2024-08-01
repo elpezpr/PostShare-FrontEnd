@@ -9,49 +9,54 @@ const PostDetail = () => {
   const [comments, setComments] = useState([]);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    const fetchPostDetails = async () => {
-      try {
-        const postResponse = await fetch(`http://localhost:8080/api/posts/${postId}`);
-        if (!postResponse.ok) throw new Error('Failed to fetch post');
-        const postData = await postResponse.json();
-        setPost(postData);
+  // Function to fetch post details and comments
+  const fetchPostDetails = async () => {
+    try {
+      // Fetch post details
+      const postResponse = await fetch(`http://localhost:8080/api/posts/${postId}`);
+      if (!postResponse.ok) throw new Error('Failed to fetch post');
+      const postData = await postResponse.json();
+      setPost(postData);
 
-        const commentsResponse = await fetch(`http://localhost:8080/api/posts/${postId}/comments`);
-        if (!commentsResponse.ok) {
-          if (commentsResponse.status === 404) {
-            // No comments found, set comments to an empty array
-            setComments([]);
-          } else {
-            throw new Error('Failed to fetch comments');
-          }
+      // Fetch comments
+      const commentsResponse = await fetch(`http://localhost:8080/api/posts/${postId}/comments`);
+      if (!commentsResponse.ok) {
+        if (commentsResponse.status === 404) {
+          setComments([]); // No comments found
         } else {
-          const commentsData = await commentsResponse.json();
-          setComments(commentsData);
+          throw new Error('Failed to fetch comments');
         }
-      } catch (error) {
-        setError(error.message);
-        console.error('Error fetching data:', error);
+      } else {
+        const commentsData = await commentsResponse.json();
+        setComments(commentsData);
       }
-    };
+    } catch (err) {
+      setError(err.message);
+      console.error('Error fetching data:', err);
+    }
+  };
 
+  // Fetch data on component mount or when postId changes
+  useEffect(() => {
     fetchPostDetails();
   }, [postId]);
 
+  // Refresh comments
   const refreshComments = async () => {
     try {
       const response = await fetch(`http://localhost:8080/api/posts/${postId}/comments`);
       if (!response.ok) throw new Error('Failed to fetch comments');
       const commentsData = await response.json();
       setComments(commentsData);
-    } catch (error) {
-      setError(error.message);
-      console.error('Error fetching comments:', error);
+    } catch (err) {
+      setError(err.message);
+      console.error('Error fetching comments:', err);
     }
   };
 
-  if (error) return <div>Error: {error}</div>;
-  if (!post) return <div>Loading...</div>;
+  // Render error or loading state
+  if (error) return <div className="error-message">Error: {error}</div>;
+  if (!post) return <div className="loading-message">Loading...</div>;
 
   return (
     <div className="post-detail-page">
@@ -62,7 +67,7 @@ const PostDetail = () => {
       <div className="comments-section">
         <h2>Comments</h2>
         {comments.length > 0 ? (
-          comments.map((comment) => (
+          comments.map(comment => (
             <div key={comment.id} className="comment-card">
               <p>{comment.content}</p>
               <small>By: {comment.author}</small>
