@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import '../styles/AddPostForm.css';
 
 const AddPostForm = () => {
@@ -7,6 +8,8 @@ const AddPostForm = () => {
     content: '',
     author: '',
   });
+
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -33,6 +36,7 @@ const AddPostForm = () => {
         content: '',
         author: '',
       });
+      navigate('/'); // Redirect to homepage
     } else {
       alert('Error adding post. Please try again.');
     }

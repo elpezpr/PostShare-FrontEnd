@@ -13,6 +13,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/posts/:postId" element={<PostDetail />} />
         <Route path="/add-post" element={<AddPostForm />} />
+        <Route path="/edit-post/:postId" element={<AddPostForm />} />
       </Routes>
     </Router>
   );
