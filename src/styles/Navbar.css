@@ -1,13 +1,31 @@
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    background-color: #2540ac;
-  }
-  
-  .navbar-icon {
-    width: 40px;
-    height: 40px;
-  }
-  
+  display: flex;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center; /* Center items vertically */
+  height: 60px;
+  background-color: #2540ac;
+  padding: 0 20px; /* Optional padding for spacing */
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center; /* Center items vertically within each section */
+}
+
+.navbar a {
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline from links */
+  margin-left: 20px; /* Space between links */
+  display: flex; /* Flexbox to center text vertically */
+  align-items: center; /* Center text vertically */
+}
+
+.navbar a:first-child {
+  margin-left: 0; /* No margin for the first link */
+}
+
+.navbar-icon {
+  width: 40px;
+  height: 40px;
+}

@@ -1,11 +1,58 @@
+/* Container for the post details page */
 .post-detail-page {
-    padding: 20px;
-    background-color: #f5f5f5;
-    text-align: center;
-  }
-  
-  .post-author {
-    margin-top: 20px;
-    font-style: italic;
-  }
-  
+  padding: 20px; /* Padding inside the container */
+  background-color: #f5f5f5; /* Background color */
+  text-align: center; /* Center align text */
+}
+
+/* Author information styling */
+.post-author {
+  margin-top: 20px; /* Space above author info */
+  font-style: italic; /* Italic font style */
+  color: #555; /* Text color */
+}
+
+/* Comments section styling */
+.comments-section {
+  margin-top: 40px; /* Space above comments section */
+  padding: 20px; /* Padding inside the comments section */
+  background-color: #ffffff; /* Background color for comments section */
+  border: 1px solid #ddd; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: left; /* Align text to the left */
+  max-width: 800px; /* Maximum width of the comments section */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}
+
+/* Comments header styling */
+.comments-section h2 {
+  font-size: 22px; /* Font size for header */
+  color: #333; /* Text color */
+  margin-bottom: 20px; /* Space below header */
+}
+
+/* Comment card styling */
+.comment-card {
+  padding: 15px; /* Padding inside each comment card */
+  margin-bottom: 15px; /* Space below each comment card */
+  border: 1px solid #ddd; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #ffffff; /* Background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+/* Comment content styling */
+.comment-card p {
+  font-size: 16px; /* Font size for comment content */
+  color: #333; /* Text color */
+  margin-bottom: 5px; /* Space below comment content */
+}
+
+/* Comment author styling */
+.comment-card small {
+  display: block; /* Block display to ensure it appears on a new line */
+  font-size: 14px; /* Font size for author name */
+  color: #888; /* Text color */
+}

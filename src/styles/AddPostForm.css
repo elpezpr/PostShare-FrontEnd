@@ -1,48 +1,74 @@
+/* Container for the add post form */
 .add-post-form {
-    padding: 20px;
-    background-color: #f5f5f5;
-    text-align: center;
-  }
-  
-  .add-post-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .add-post-form .form-group {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  
-  .add-post-form label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .add-post-form input,
-  .add-post-form textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  .add-post-form textarea {
-    resize: vertical; /* Allows vertical resizing for textarea */
-  }
-  
-  .add-post-form button {
-    padding: 10px 20px;
-    background-color: #2540ac;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .add-post-form button:hover {
-    background-color: #1a2b7d; /* Darker shade on hover */
-  }
-  
+  max-width: 600px; /* Maximum width of the form */
+  margin: 20px auto; /* Center the form horizontally */
+  padding: 20px; /* Padding inside the form */
+  border: 1px solid #ddd; /* Border color and width */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center the text */
+}
+
+/* Center the form elements */
+.add-post-form form {
+  display: flex;
+  flex-direction: column; /* Stack form elements vertically */
+  align-items: center; /* Center form elements horizontally */
+}
+
+/* Form group styles */
+.add-post-form .form-group {
+  margin-bottom: 20px; /* Space below each form group */
+  width: 100%; /* Full width of the container */
+  text-align: left; /* Align the text to the left */
+}
+
+/* Label styles */
+.add-post-form label {
+  display: block; /* Block display for labels */
+  margin-bottom: 8px; /* Space below the label */
+  font-weight: bold; /* Bold text for labels */
+  color: #333; /* Text color */
+  text-align: left; /* Align label text to the left */
+}
+
+/* Input and textarea styles */
+.add-post-form input,
+.add-post-form textarea {
+  width: 100%; /* Full width of the container */
+  padding: 12px; /* Padding inside the input/textarea */
+  border: 1px solid #ccc; /* Border color and width */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Textarea specific styles */
+.add-post-form textarea {
+  height: 100px; /* Fixed height for the textarea */
+  resize: vertical; /* Allows vertical resizing */
+}
+
+/* Button styles */
+.add-post-form button {
+  padding: 12px 20px; /* Padding inside the button */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #2540ac; /* Background color */
+  color: white; /* Text color */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Button hover effect */
+.add-post-form button:hover {
+  background-color: #1a2c8a; /* Darker background color on hover */
+}
+
+/* Error message styles */
+.add-post-form p {
+  color: #e74c3c; /* Red color for error messages */
+  font-size: 14px; /* Font size for error messages */
+}

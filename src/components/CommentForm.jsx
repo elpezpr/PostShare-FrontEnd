@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/CommentForm.css'
 
 const CommentForm = ({ postId, onCommentAdded }) => {
   const [comment, setComment] = useState('');

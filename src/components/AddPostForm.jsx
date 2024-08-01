@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import '../styles/AddPostForm.css';
+import '../styles/AddPostForm.css';
 
 const AddPostForm = () => {
   const [formData, setFormData] = useState({

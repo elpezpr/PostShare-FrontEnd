@@ -1,26 +1,52 @@
+/* Container for the post list */
 .post-list {
-    padding: 20px;
-    background-color: #f5f5f5;
-  }
-  
-  .posts-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .post-card {
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    width: 300px;
-    text-align: center;
-  }
-  
-  .post-card a {
-    text-decoration: none;
-    color: #000;
-  }
-  
+  padding: 20px;
+  background-color: #f5f5f5; /* Background color */
+}
+
+/* Center the main title */
+h1 {
+  text-align: center; /* Center text */
+}
+
+/* Container for posts */
+.posts-container {
+  display: flex; /* Use Flexbox layout */
+  flex-wrap: wrap; /* Allow items to wrap onto multiple rows */
+  gap: 20px; /* Space between posts */
+  justify-content: center; /* Center posts horizontally */
+}
+
+/* Individual post card styling */
+.post-card {
+  background: #fff; /* Background color of the card */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  padding: 10px; /* Padding inside the card */
+  width: 200px; /* Fixed width for consistency */
+  height: 200px; /* Fixed height to ensure all posts are the same size */
+  text-align: center; /* Center text inside the card */
+  display: flex; /* Flexbox for internal content alignment */
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: space-between; /* Space out child elements */
+  box-sizing: border-box; /* Ensure padding is included in the width and height */
+}
+
+/* Optional: Style for post images */
+.post-image {
+  width: 100%; /* Make image fit the width of the card */
+  height: 150px; /* Fixed height for images */
+  object-fit: cover; /* Ensure image covers the area without distortion */
+  border-radius: 4px; /* Rounded corners for image */
+}
+
+/* Optional: Additional styling for post title and content */
+.post-card h2 {
+  margin: 0 0 10px; /* Margin below title */
+  font-size: 18px; /* Adjust font size */
+}
+
+.post-card p {
+  margin: 0 0 10px; /* Margin below content */
+  font-size: 14px; /* Adjust font size */
+}
