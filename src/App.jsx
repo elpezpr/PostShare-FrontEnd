@@ -1,12 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import HomePage from './pages/HomePage';
+import PostDetail from './components/PostDetail'; // Corrected import
+import AddPostForm from './components/AddPostForm'; // Corrected import
 
-function App() {
+const App = () => {
   return (
-    <h2>My React</h2>
-  )
-}
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/posts/:postId" element={<PostDetail />} /> {/* Corrected component name */}
+        <Route path="/add-post" element={<AddPostForm />} /> {/* Corrected component name */}
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
