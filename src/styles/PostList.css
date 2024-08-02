@@ -30,6 +30,7 @@ h1 {
   flex-direction: column; /* Stack child elements vertically */
   justify-content: space-between; /* Space out child elements */
   box-sizing: border-box; /* Ensure padding is included in the width and height */
+  overflow: hidden; /* Hide overflow content */
 }
 
 /* Optional: Style for post images */
@@ -46,7 +47,14 @@ h1 {
   font-size: 18px; /* Adjust font size */
 }
 
+/* Adjust post content styling to handle overflow */
 .post-card p {
-  margin: 0 0 10px; /* Margin below content */
+  margin: 0; /* Remove margin to fit content better */
   font-size: 14px; /* Adjust font size */
+  flex-grow: 1; /* Allow paragraph to grow and fill space */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Show ellipsis if text overflows */
+  display: -webkit-box; /* Enable multi-line truncation */
+  -webkit-line-clamp: 3; /* Limit to a specific number of lines */
+  -webkit-box-orient: vertical; /* Set box orientation to vertical */
 }

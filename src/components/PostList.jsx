@@ -53,7 +53,7 @@ const PostList = () => {
           <div key={post.id} className="post-card">
             <Link to={`/posts/${post.id}`}>
               <h2>{post.title}</h2>
-              <p>{post.content.slice(0, 100)}...</p>
+              <p>{post.content}</p>
             </Link>
             <button onClick={() => handleDelete(post.id)}>Delete Post</button>
           </div>
