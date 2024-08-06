@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PostList from '../components/PostList';
-// import '../styles/HomePage.css';
+import '../styles/HomePage.css';
 
 const HomePage = () => {
   const [posts, setPosts] = useState([]);

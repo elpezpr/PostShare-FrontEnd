@@ -23,13 +23,11 @@ const UpdatePostForm = () => {
     setLoading(true);
 
     try {
-      // Fetch the post to check if it exists
       const fetchResponse = await fetch(`http://localhost:8080/api/posts/${postId}`);
       if (!fetchResponse.ok) {
         throw new Error('Failed to fetch post. Ensure the post ID is correct.');
       }
 
-      // If the post exists, update its content
       const response = await fetch(`http://localhost:8080/api/posts/content/${postId}`, {
         method: 'PATCH',
         headers: {

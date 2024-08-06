@@ -1,70 +1,57 @@
-/* Container for the comment form */
 .comment-form {
-  max-width: 600px; /* Maximum width of the form */
-  margin: 20px auto; /* Center the form horizontally */
-  padding: 20px; /* Padding inside the form */
-  border: 1px solid #ddd; /* Border color and width */
-  border-radius: 8px; /* Rounded corners */
-  background-color: #f9f9f9; /* Background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Header inside the form */
 .comment-form h2 {
-  margin-bottom: 20px; /* Space below the header */
-  color: #333; /* Text color */
+  margin: 10px 0;
+  color: #333;
+  font-size: 22px;
 }
 
-/* Form element styles */
 .comment-form form {
   display: flex;
-  flex-direction: column; /* Stack form elements vertically */
+  flex-direction: column;
 }
 
-/* Label styles */
 .comment-form label {
-  margin-bottom: 8px; /* Space below the label */
-  font-weight: bold; /* Bold text for labels */
-  color: #333; /* Text color */
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
 }
 
-/* Textarea and input styles */
 .comment-form textarea,
 .comment-form input {
-  width: 100%; /* Full width of the container */
-  padding: 12px; /* Padding inside the input/textarea */
-  margin-bottom: 20px; /* Space below the input/textarea */
-  border: 1px solid #ccc; /* Border color and width */
-  border-radius: 4px; /* Rounded corners */
-  font-size: 16px; /* Font size */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  width: 100%;
+  padding: 10px; 
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px; 
+  box-sizing: border-box;
 }
 
-/* Textarea specific styles */
 .comment-form textarea {
-  height: 100px; /* Fixed height for the textarea */
-  resize: vertical; /* Allows vertical resizing */
+  resize: vertical;
 }
 
-/* Button styles */
 .comment-form button {
-  padding: 12px 20px; /* Padding inside the button */
-  border: none; /* No border */
-  border-radius: 4px; /* Rounded corners */
-  background-color: #2540ac; /* Background color */
-  color: white; /* Text color */
-  font-size: 16px; /* Font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth background color transition */
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2540ac;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
 }
 
-/* Button hover effect */
 .comment-form button:hover {
-  background-color: #1a2c8a; /* Darker background color on hover */
-}
-
-/* Error message styles */
-.comment-form p {
-  color: #e74c3c; /* Red color for error messages */
-  font-size: 14px; /* Font size for error messages */
+  background-color: #1a2c8a;
 }

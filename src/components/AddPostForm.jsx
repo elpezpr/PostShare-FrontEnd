@@ -9,7 +9,7 @@ const AddPostForm = () => {
     author: '',
   });
 
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;

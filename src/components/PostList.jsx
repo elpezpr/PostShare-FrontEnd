@@ -6,7 +6,6 @@ const PostList = () => {
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState('');
 
-  // Define the fetchPosts function outside useEffect
   const fetchPosts = async () => {
     try {
       const response = await fetch('http://localhost:8080/api/posts');
@@ -20,10 +19,9 @@ const PostList = () => {
   };
 
   useEffect(() => {
-    // Call the fetchPosts function inside useEffect
     fetchPosts();
-  }, []); // Empty dependency array means this runs once on mount
-
+  }, []);
+  
   const handleDelete = async (postId) => {
     try {
       const response = await fetch(`http://localhost:8080/api/posts/${postId}`, {

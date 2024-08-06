@@ -9,16 +9,13 @@ const PostDetail = () => {
   const [comments, setComments] = useState([]);
   const [error, setError] = useState('');
 
-  // Function to fetch post details and comments
   const fetchPostDetails = async () => {
     try {
-      // Fetch post details
       const postResponse = await fetch(`http://localhost:8080/api/posts/${postId}`);
       if (!postResponse.ok) throw new Error('Failed to fetch post');
       const postData = await postResponse.json();
       setPost(postData);
 
-      // Fetch comments
       const commentsResponse = await fetch(`http://localhost:8080/api/posts/${postId}/comments`);
       if (!commentsResponse.ok) {
         if (commentsResponse.status === 404) {
@@ -36,12 +33,10 @@ const PostDetail = () => {
     }
   };
 
-  // Fetch data on component mount or when postId changes
   useEffect(() => {
     fetchPostDetails();
   }, [postId]);
 
-  // Refresh comments
   const refreshComments = async () => {
     try {
       const response = await fetch(`http://localhost:8080/api/posts/${postId}/comments`);
@@ -54,7 +49,6 @@ const PostDetail = () => {
     }
   };
 
-  // Render error or loading state
   if (error) return <div className="error-message">Error: {error}</div>;
   if (!post) return <div className="loading-message">Loading...</div>;
 
