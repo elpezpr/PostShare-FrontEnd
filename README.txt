@@ -29,9 +29,9 @@ Browser Developer Tools
 
 *** Usage ***
 
-To run the PostShare frontend application:
+To use the PostShare frontend application:
 
-1. Clone the Repository: Clone the repository from [PostShare-FrontEnd](https://github.com/elpezpr/PostShare-FrontEnd).
+1. Clone the repository.
 
 2. Install Dependencies: Navigate to the project directory and run `npm install` to install the necessary dependencies.
 
